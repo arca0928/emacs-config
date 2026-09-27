@@ -1,0 +1,112 @@
+#+title: Emacs Configuration
+#+property: header-args: emacs-lisp
+
+* Bootstrap
+
+#+begin_src elisp
+;;; -*- lexical-binding: t -*-
+#+end_src
+
+* SetupEl
+
+#+begin_src elisp
+  (require 'setup)
+#+end_src
+
+#+begin_src elisp
+  (setup-define :package
+    (lambda (package) nil)
+    :shorthand 'cadr
+    :repeatable 't)
+#+end_src
+
+#+begin_src elisp
+  (setup-define :opt
+    (lambda (&rest pairs) `(setopt ,@pairs))
+    :after-loaded t)
+#+end_src
+
+#+begin_src elisp
+  (setup-define :global
+    (lambda (key command)
+      `(keymap-global-set ,key ,command))
+    :repeatable t
+    :ensure '(nil func))
+#+End_src
+
+* Emacs
+
+#+begin_src elisp
+  (setup emacs
+    (:opt context-menu-mode t
+  	enable-recursive-minibuffers t
+  	read-extended-command-predicate #'command-completion-default-include-p))
+#+end_src
+
+* UI
+
+#+begin_src elisp
+  (setq inhibit-startup-screen t)
+#+end_src
+
+#+begin_src elisp
+  (setup (:package ef-themes)
+    (:require ef-themes)
+    (load-theme 'ef-owl :no-confirm))
+#+end_src
+
+* Completion
+
+#+begin_src elisp
+  (setup (:package vertico)
+    (:require)
+    (:opt vertico-cycle t
+  	vertico-resize t)
+    (vertico-mode))
+#+end_src
+
+#+begin_src elisp
+  (setup (:package orderless)
+    (:require)
+    (:opt completion-styles '(orderless basic)
+  	completion-category-overrides '((file (styles basic partial-completion)))
+  	completion-category-defaults nil))
+#+end_src
+
+#+begin_src elisp
+  (setup (:package consult)
+    (:require)
+    (:global "<remap> <switch-to-buffer>" #'consult-buffer
+  	   "<remap> <goto-line>" #'consult-goto-line
+  	   "<remap> <yank-pop>" #'consult-yank-pop
+
+  	   "C-s" #'consult-line
+  	   "M-s r" #'consult-ripgrep
+  	   "M-g i" #'consult-imenu))
+#+end_src
+
+#+begin_src elisp
+  (setup (:package corfu)
+    (:require)
+    (:opt corfu-cycle t
+  	corfu-auto t
+  	corfu-auto-delay 0.1
+  	corfu-auto-prefix 2
+  	corfu-preselect 'prompt
+  	corfu-on-exact-match nil)
+    (:with-map corfu-map
+      (:bind
+       "C-p" corfu-previous
+       "C-n" corfu-next
+       "C-y" corfu-insert
+       "C-e" corfu-quit
+       "M-SPC" corfu-insert-separator
+       "C-b" corfu-popupinfo-scroll-down
+       "C-f" corfu-pupupinfo-scroll-up)
+      (:unbind "RET"))
+    (global-corfu-mode 1))
+
+  (setup corfu-popupinfo
+    (:require)
+    (corfu-popupinfo-mode 1))
+#+end_src

@@ -1,0 +1,146 @@
+{
+  "nodes": {
+    "compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789312871,
+        "narHash": "sha256-vgIrxiMH4QBSAmtZpSdCwgmjAl1FISnuawHf8NA14KQ=",
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "rev": "90880f81419577e1d3f68424d2a3adf31e6d663e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "type": "github"
+      }
+    },
+    "consult": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790413830,
+        "narHash": "sha256-NZynusRDUSF3PXjYfIQKbasSSRZ3Om3kEZjcEazIFbw=",
+        "owner": "minad",
+        "repo": "consult",
+        "rev": "3c64214db5cd61a8f8186e4dce89c0e04be1652c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "consult",
+        "type": "github"
+      }
+    },
+    "corfu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789313238,
+        "narHash": "sha256-JwssB1UFF/FH0wn0GbcOWtjiWh2T4QF0GSAEyohglds=",
+        "owner": "minad",
+        "repo": "corfu",
+        "rev": "b468efac023dda39332acc943edc9895c80b5a6f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "corfu",
+        "type": "github"
+      }
+    },
+    "ef-themes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786704977,
+        "narHash": "sha256-hEHcCJsZTHpixughqJbONMQIlWd2W24ZVKndWuNoAFI=",
+        "owner": "protesilaos",
+        "repo": "ef-themes",
+        "rev": "e1f617607a5f0692b398365dcd8412ba1e98ccb3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "protesilaos",
+        "repo": "ef-themes",
+        "type": "github"
+      }
+    },
+    "modus-themes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789981950,
+        "narHash": "sha256-09zZJjrHM4Exb/UlsKghb7KifO/yX8XByFpCM+gGKh8=",
+        "owner": "protesilaos",
+        "repo": "modus-themes",
+        "rev": "4fcc8d00540a81936a213d608a69c4c85df8f970",
+        "type": "github"
+      },
+      "original": {
+        "owner": "protesilaos",
+        "repo": "modus-themes",
+        "type": "github"
+      }
+    },
+    "orderless": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788966398,
+        "narHash": "sha256-8OrXAIdh7WmhJQWuM+0T3qn8DSn8hN0Sj5P2Y6pT1K4=",
+        "owner": "oantolin",
+        "repo": "orderless",
+        "rev": "5806e3f9401606d16962cffae68188c92deb1272",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oantolin",
+        "repo": "orderless",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "compat": "compat",
+        "consult": "consult",
+        "corfu": "corfu",
+        "ef-themes": "ef-themes",
+        "modus-themes": "modus-themes",
+        "orderless": "orderless",
+        "setup": "setup",
+        "vertico": "vertico"
+      }
+    },
+    "setup": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761595148,
+        "narHash": "sha256-lLeKsLFf1+Bjk6ETq+0Nncw6DPOVxE49cAexdLAr/5U=",
+        "ref": "refs/heads/master",
+        "rev": "de9b86c6f29cf9888e911924ffc4ce47312320c3",
+        "revCount": 224,
+        "type": "git",
+        "url": "https://codeberg.org/pkal/setup.el"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/pkal/setup.el"
+      }
+    },
+    "vertico": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789313132,
+        "narHash": "sha256-Xg0yPOYWWYI5dxdY0e+aFHUNL8R+acMc1P+JwHrijGk=",
+        "owner": "minad",
+        "repo": "vertico",
+        "rev": "a9998a777f1d92348f84d091bb15b87df933a7a2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "vertico",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
