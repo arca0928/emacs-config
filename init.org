@@ -110,3 +110,26 @@
     (:require)
     (corfu-popupinfo-mode 1))
 #+end_src
+
+* Languages
+** Base
+#+begin_src elisp
+  (setq treesit-font-lock-level 4)
+#+end_src
+
+** Nix
+#+begin_src elisp
+  (setup (:package nix-ts-mode)
+    (:require)
+    (:match-file "*.nix"))
+#+end_src
+* LSP
+** lsp-proxy
+#+begin_src elisp
+  (setup (:package lsp-proxy)
+    (:require)
+    (:opt lsp-proxy-user-languages-config
+  	(expand-file-name "languages.toml" user-emacs-directory))
+    (:with-mode (nix-ts-mode)
+      (:hook #'lsp-proxy-mode)))
+#+end_src

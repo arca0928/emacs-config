@@ -48,6 +48,22 @@
         "type": "github"
       }
     },
+    "dash": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786384982,
+        "narHash": "sha256-t1vs+EbWwHx+cCYTQnoLoE3R+qou+cP2tn4lTazCZyU=",
+        "owner": "magnars",
+        "repo": "dash.el",
+        "rev": "d746dd9edcb67a108818beb0cdc78dc1cb466832",
+        "type": "github"
+      },
+      "original": {
+        "owner": "magnars",
+        "repo": "dash.el",
+        "type": "github"
+      }
+    },
     "ef-themes": {
       "flake": false,
       "locked": {
@@ -64,6 +80,54 @@
         "type": "github"
       }
     },
+    "f": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1727955076,
+        "narHash": "sha256-rDUl2oUlcnSjNbFZn9A/80RVk6neaTScw2kvh6FjmTE=",
+        "owner": "rejeep",
+        "repo": "f.el",
+        "rev": "931b6d0667fe03e7bf1c6c282d6d8d7006143c52",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rejeep",
+        "repo": "f.el",
+        "type": "github"
+      }
+    },
+    "ht": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688363925,
+        "narHash": "sha256-suE9ncN4rTA/9GcfAK6B+m9vnE8pYpfGavCFrXpA0+8=",
+        "owner": "Wilfred",
+        "repo": "ht.el",
+        "rev": "1c49aad1c820c86f7ee35bf9fff8429502f60fef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Wilfred",
+        "repo": "ht.el",
+        "type": "github"
+      }
+    },
+    "lsp-proxy": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789724913,
+        "narHash": "sha256-J9Qo4GjB8VDB+llYNdeLOWQFIx1pNOKwxBM3jx06Fs0=",
+        "owner": "jadestrong",
+        "repo": "lsp-proxy",
+        "rev": "eef00d49f752b60a78ee3d91a8addb53a6701e37",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jadestrong",
+        "repo": "lsp-proxy",
+        "type": "github"
+      }
+    },
     "modus-themes": {
       "flake": false,
       "locked": {
@@ -77,6 +141,22 @@
       "original": {
         "owner": "protesilaos",
         "repo": "modus-themes",
+        "type": "github"
+      }
+    },
+    "nix-ts-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786638012,
+        "narHash": "sha256-a0fFqOv758zahLvYXDgcL9+VM19SyvV4zmdFPHWiTXE=",
+        "owner": "nix-community",
+        "repo": "nix-ts-mode",
+        "rev": "09c89886a22b8e37ac0de9210ff5b2b79c520fd7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-ts-mode",
         "type": "github"
       }
     },
@@ -101,11 +181,33 @@
         "compat": "compat",
         "consult": "consult",
         "corfu": "corfu",
+        "dash": "dash",
         "ef-themes": "ef-themes",
+        "f": "f",
+        "ht": "ht",
+        "lsp-proxy": "lsp-proxy",
         "modus-themes": "modus-themes",
+        "nix-ts-mode": "nix-ts-mode",
         "orderless": "orderless",
+        "s": "s",
         "setup": "setup",
         "vertico": "vertico"
+      }
+    },
+    "s": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785632874,
+        "narHash": "sha256-C6T1Fh0t0YvcoMbTQpa3iRIMM0MV0f5HaZDhvmi/YaA=",
+        "owner": "magnars",
+        "repo": "s.el",
+        "rev": "d7c04b84d03481a1ed62ee13dbe595224ccbe57c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "magnars",
+        "repo": "s.el",
+        "type": "github"
       }
     },
     "setup": {

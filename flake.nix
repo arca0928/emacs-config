@@ -40,7 +40,8 @@
     systems,
     emacs-overlay,
     org-babel,
-    twist,
+    twist, 
+    lsp-proxy,
     ...
   }: flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import systems;
@@ -53,6 +54,7 @@
           initDir = pkgs.linkFarm "emacs-init" [
             { name = "early-init.el"; path = earlyInit; }
             { name = "init.el"; path = initFile; }
+	    { name = "languages.toml"; path = ./languages.toml; }
           ];
 
           launcher = pkgs.writeShellScript "emacs-launch" ''
@@ -62,7 +64,7 @@
           profile = {
             lockDir = ./lock;
             initFiles = [ initFile ];
-            initParser = twist.lib.parseSetup { inherit (inputs.nixpkgs) lib; } {  };
+            initParser = twist.lib.parseSetup { inherit (inputs.nixpkgs) lib; } { };
             extraPackages = [
               "setup"
             ];
@@ -88,7 +90,18 @@
                   path = profile.extraRecipeDir;
                 }
               ] ++ (import ./registries.nix inputs);
-          });
+
+            extraSiteStartElisp = ''
+            (add-to-list 'treesit-extra-load-path "${treesitGrammars}/lib")
+          ''; 
+            }).overrideScope (_final: prev: {
+	      executablePackages = prev.executablePackages ++ [
+		pkgs.ripgrep
+		lsp-proxy.packages.${system}.default
+	      ];
+	    });
+
+          treesitGrammars = pkgs.emacsPackages.treesit-grammars.with-all-grammars;
 
         in {
         _module.args.pkgs = import inputs.nixpkgs {

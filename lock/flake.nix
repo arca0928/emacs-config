@@ -19,10 +19,34 @@
       repo = "corfu";
       type = "github";
     };
+    dash = {
+      flake = false;
+      owner = "magnars";
+      repo = "dash.el";
+      type = "github";
+    };
     ef-themes = {
       flake = false;
       owner = "protesilaos";
       repo = "ef-themes";
+      type = "github";
+    };
+    "f" = {
+      flake = false;
+      owner = "rejeep";
+      repo = "f.el";
+      type = "github";
+    };
+    ht = {
+      flake = false;
+      owner = "Wilfred";
+      repo = "ht.el";
+      type = "github";
+    };
+    lsp-proxy = {
+      flake = false;
+      owner = "jadestrong";
+      repo = "lsp-proxy";
       type = "github";
     };
     modus-themes = {
@@ -31,10 +55,22 @@
       repo = "modus-themes";
       type = "github";
     };
+    nix-ts-mode = {
+      flake = false;
+      owner = "nix-community";
+      repo = "nix-ts-mode";
+      type = "github";
+    };
     orderless = {
       flake = false;
       owner = "oantolin";
       repo = "orderless";
+      type = "github";
+    };
+    "s" = {
+      flake = false;
+      owner = "magnars";
+      repo = "s.el";
       type = "github";
     };
     setup = {
