@@ -3,6 +3,14 @@
 #+end_src
 
 #+begin_src elisp
+  ;; Keep Customize writes separate from the Nix-managed init files.
+  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+  (when (fboundp 'startup-redirect-eln-cache)
+    (startup-redirect-eln-cache
+     (expand-file-name "eln-cache/" user-emacs-directory)))
+#+end_src
+
+#+begin_src elisp
   (with-eval-after-load 'menu-bar
     (menu-bar-mode -1))
   (with-eval-after-load 'scroll-bar

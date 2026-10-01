@@ -152,7 +152,9 @@
 #+begin_src elisp
   (setup (:package lsp-proxy)
     (:opt lsp-proxy-user-languages-config
-  	(expand-file-name "languages.toml" user-emacs-directory))
+          (expand-file-name "languages.toml"
+                          (or (bound-and-true-p emacs-config-directory)
+                              user-emacs-directory)))
     (:with-mode (nix-ts-mode
   	       typst-ts-mode
   	       typescript-ts-mode)
@@ -163,4 +165,11 @@
 #+begin_src elisp
   (setup (:package magit)
     (:global "C-c g" 'magit-status))
+#+end_src
+
+* Customizations
+
+#+begin_src elisp
+  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+  (load custom-file 'noerror 'nomessage)
 #+end_src
