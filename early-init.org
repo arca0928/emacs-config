@@ -12,6 +12,5 @@
 #+end_src
 
 #+begin_src elisp
-  (add-to-list 'default-frame-alist '(font . "Maple Mono NF-14"))
+  (add-to-list 'default-frame-alist '(font . "Maple Mono NF JP-13"))
 #+end_src
-
