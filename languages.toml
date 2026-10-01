@@ -1,5 +1,8 @@
 [[language]]
 name = "nix"
+language-id = "nix"
+file-types = ["nix"]
+roots = ["flake.nix", "shell.nix", "default.nix", ".git"]
 language-servers = ["nixd"]
 
 [language-server.nixd]
