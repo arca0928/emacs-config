@@ -43,6 +43,27 @@
   	read-extended-command-predicate #'command-completion-default-include-p))
 #+end_src
 
+* EWM
+
+** Custom Functions
+
+#+begin_src elisp
+  (defun my/ewm-session-p
+      (member "ewm"
+  	    (split-string
+  	     (or (getenv "XDG_CURRENT_SESSION") "")
+  	     ":" t)))
+#+end_src
+
+** Main config
+
+#+begin_src elisp
+  (setup ewm
+    (:only-if my/ewm-session-p)
+    (ewm-text-input-auto-mode 1)
+    (setq ewm-text-input-method "ddskk"))
+#+end_src
+
 * Edit
 
 ** IME
