@@ -1,3 +1,4 @@
+
 #+title: Emacs Configuration
 #+property: header-args: emacs-lisp
 
@@ -55,6 +56,13 @@
 #+end_src
 
 * Edit
+
+** Electric pair mode
+
+#+begin_src elisp
+  (setup electric-pair-mode
+    (electric-pair-mode 1))
+#+end_src
 
 ** IME
 
@@ -134,6 +142,7 @@
 
 * Languages
 ** Base
+
 #+begin_src elisp
   (setq treesit-font-lock-level 4)
 #+end_src
@@ -178,6 +187,11 @@
     (:global "C-c g" 'magit-status))
 #+end_src
 
+** Eat
+
+#+begin_src elisp
+  (setup (:package eat))
+#+end_src
 * Customizations
 
 #+begin_src elisp

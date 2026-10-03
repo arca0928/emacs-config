@@ -49,6 +49,11 @@
       repo = "ddskk";
       type = "github";
     };
+    eat = {
+      flake = false;
+      type = "git";
+      url = "https://codeberg.org/akib/emacs-eat";
+    };
     ef-themes = {
       flake = false;
       owner = "protesilaos";

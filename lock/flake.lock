@@ -128,6 +128,22 @@
         "type": "github"
       }
     },
+    "eat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738802687,
+        "narHash": "sha256-9xG2rMlaMFY77JzUQ3JFrc7XKILZSL8TbP/BkzvBvMk=",
+        "ref": "refs/heads/master",
+        "rev": "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99",
+        "revCount": 249,
+        "type": "git",
+        "url": "https://codeberg.org/akib/emacs-eat"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/akib/emacs-eat"
+      }
+    },
     "ef-themes": {
       "flake": false,
       "locked": {
@@ -298,6 +314,7 @@
         "corfu": "corfu",
         "dash": "dash",
         "ddskk": "ddskk",
+        "eat": "eat",
         "ef-themes": "ef-themes",
         "f": "f",
         "ht": "ht",
