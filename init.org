@@ -88,7 +88,6 @@
 
 #+begin_src elisp
   (setup (:package vertico)
-    (:require vertico)
     (:opt vertico-cycle t
   	vertico-resize t)
     (vertico-mode))
@@ -96,7 +95,6 @@
 
 #+begin_src elisp
   (setup (:package orderless)
-    (:require orderless)
     (:opt completion-styles '(orderless basic)
   	completion-category-overrides '((file (styles basic partial-completion)))
   	completion-category-defaults nil))
@@ -104,7 +102,6 @@
 
 #+begin_src elisp
   (setup (:package consult)
-    (:require consult)
     (:global "<remap> <switch-to-buffer>" #'consult-buffer
   	   "<remap> <goto-line>" #'consult-goto-line
   	   "<remap> <yank-pop>" #'consult-yank-pop
@@ -115,29 +112,25 @@
 #+end_src
 
 #+begin_src elisp
-  (setup (:package corfu)
-    (:require corfu)
-    (:opt corfu-cycle t
-  	corfu-auto t
-  	corfu-auto-delay 0.1
-  	corfu-auto-prefix 2
-  	corfu-preselect 'prompt
-  	corfu-on-exact-match nil)
-    (:with-map corfu-map
-      (:bind
-       "C-p" corfu-previous
-       "C-n" corfu-next
-       "C-y" corfu-insert
-       "C-e" corfu-quit
-       "M-SPC" corfu-insert-separator
-       "C-b" corfu-popupinfo-scroll-down
-       "C-f" corfu-popupinfo-scroll-up)
-      (:unbind "RET"))
-    (global-corfu-mode 1))
-
-  (setup corfu-popupinfo
-    (:require corfu)
-    (corfu-popupinfo-mode 1))
+  (setq pgtk-wait-for-event-timeout nil)
+    (setup (:package corfu)
+      (:opt corfu-cycle t
+    	corfu-auto t
+    	corfu-auto-delay 0.1
+    	corfu-auto-prefix 2
+    	corfu-preselect 'prompt
+    	corfu-on-exact-match nil)
+      (:with-map corfu-map
+        (:bind
+         "C-p" corfu-previous
+         "C-n" corfu-next
+         "C-y" corfu-insert
+         "C-e" corfu-quit
+         "M-SPC" corfu-insert-separator
+         "C-b" corfu-popupinfo-scroll-down
+         "C-f" corfu-popupinfo-scroll-up)
+        (:unbind "RET"))
+      (global-corfu-mode 1))
 #+end_src
 
 * Languages
