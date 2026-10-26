@@ -5,5 +5,20 @@ file-types = ["nix"]
 roots = ["flake.nix", "shell.nix", "default.nix", ".git"]
 language-servers = ["nixd"]
 
+[[language]]
+name = "tsx"
+language-id = "typescriptreact"
+file-types = ["tsx"]
+roots = ["tsconfig.json"]
+language-servers = ["ts-ls", "oxlint"]
+
 [language-server.nixd]
 command = "nixd"
+
+[language-server.ts-ls]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[language-server.oxlint]
+command = "oxlint"
+args = ["--lsp"]

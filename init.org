@@ -140,6 +140,15 @@
   (setq treesit-font-lock-level 4)
 #+end_src
 
+*** flymake
+
+#+begin_src elisp
+  (setup flymake
+    (:opt flymake-indicator-type 'margins
+      flymake-margin-indicator-position 'left-margin
+      flymake-autoresize-margins t))
+#+end_src
+
 ** Nix
 #+begin_src elisp
   (setup (:package nix-ts-mode)
@@ -167,7 +176,8 @@
     (:opt lsp-proxy-user-languages-config
           (expand-file-name "languages.toml"
                           (or (bound-and-true-p emacs-config-directory)
-                              user-emacs-directory)))
+                              user-emacs-directory))
+      lsp-proxy-diagnostics-provider :flymake)
     (:with-mode (nix-ts-mode
   	       typst-ts-mode
   	       typescript-ts-mode)
