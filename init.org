@@ -1,4 +1,3 @@
-
 #+title: Emacs Configuration
 #+property: header-args: emacs-lisp
 
@@ -70,6 +69,11 @@
   (setup (:package ddskk)
     (:opt skk-get-jisyo-directory "~/.skk")
     (:global "C-x C-j" 'skk-mode))
+#+end_src
+
+** Line number
+#+begin_src elisp
+  (global-display-line-numbers-mode t)
 #+end_src
 
 * UI
