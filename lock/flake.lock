@@ -160,6 +160,22 @@
         "type": "github"
       }
     },
+    "envrc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792751075,
+        "narHash": "sha256-/5NJOesoPiTF5BE99/WtqTq7H8Oskinx+u7R0jGb71A=",
+        "owner": "purcell",
+        "repo": "envrc",
+        "rev": "af7e0a699060c8128fdd8318d28a7401b82bb3fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "purcell",
+        "repo": "envrc",
+        "type": "github"
+      }
+    },
     "f": {
       "flake": false,
       "locked": {
@@ -189,6 +205,22 @@
       "original": {
         "owner": "Wilfred",
         "repo": "ht.el",
+        "type": "github"
+      }
+    },
+    "inheritenv": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732024534,
+        "narHash": "sha256-qzM7uepVOTQyxJmngiePHVXFdeOw59wGvwiKl3xEDT4=",
+        "owner": "purcell",
+        "repo": "inheritenv",
+        "rev": "b9e67cc20c069539698a9ac54d0e6cc11e616c6f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "purcell",
+        "repo": "inheritenv",
         "type": "github"
       }
     },
@@ -316,8 +348,10 @@
         "ddskk": "ddskk",
         "eat": "eat",
         "ef-themes": "ef-themes",
+        "envrc": "envrc",
         "f": "f",
         "ht": "ht",
+        "inheritenv": "inheritenv",
         "llama": "llama",
         "lsp-proxy": "lsp-proxy",
         "magit": "magit",

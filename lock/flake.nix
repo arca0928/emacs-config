@@ -60,6 +60,12 @@
       repo = "ef-themes";
       type = "github";
     };
+    envrc = {
+      flake = false;
+      owner = "purcell";
+      repo = "envrc";
+      type = "github";
+    };
     "f" = {
       flake = false;
       owner = "rejeep";
@@ -70,6 +76,12 @@
       flake = false;
       owner = "Wilfred";
       repo = "ht.el";
+      type = "github";
+    };
+    inheritenv = {
+      flake = false;
+      owner = "purcell";
+      repo = "inheritenv";
       type = "github";
     };
     llama = {
